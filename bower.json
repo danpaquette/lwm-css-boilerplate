@@ -22,7 +22,7 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests",
+    "tests"
   ],
   "dependencies": {
     "normalize-css": "normalize.css#~3.0.3"
