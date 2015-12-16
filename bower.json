@@ -1,0 +1,30 @@
+{
+  "name": "lwm-css-boilerplate",
+  "description": "The Lightweight Modular CSS Boilerplate provides a set of baseline styles and tools to compose websites and web applications.",
+  "main": "gruntfile.js",
+  "authors": [
+    "Dan Paquette"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "CSS",
+    "SCSS",
+    "framework",
+    "lightweight",
+    "modular",
+    "boilerplate",
+    "lwm"
+  ],
+  "homepage": "https://github.com/danpaquette/lwm-css-boilerplate",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}
