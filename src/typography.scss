@@ -1,0 +1,57 @@
+@import 'settings';
+
+// **************************************************************************
+//
+// TYPOGRAPHY
+//
+// 01. Headings
+//
+// **************************************************************************
+
+// **************************************************************************
+//
+// 01. Headings
+//
+// **************************************************************************
+
+$headings: 6 !default;
+$heading-scale-factor: 1.05 !default;
+$heading-font-size: $base-font-size !default;
+$heading-line-height: $base-line-height !default;
+$heading-bottom-margin: $standard-spacing !default;
+$heading-top-padding: 0 !default;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	font-weight: normal;
+	margin: 0 0 #{$standard-spacing} 0;
+}
+
+@each $media-query-name, $media-query-value in $media-queries {
+
+	@media #{$media-query-value} {
+
+		@while $headings > 0 {
+
+			h#{$headings} {
+				font-size: $heading-font-size;
+				line-height: $heading-line-height;
+				margin-bottom: $heading-bottom-margin;
+				padding-top: $heading-top-padding;
+			}
+
+			$headings: $headings - 1;
+			$heading-font-size: $heading-font-size * $heading-scale-factor;
+			$heading-line-height: $heading-line-height - .1rem;
+			$heading-bottom-margin: $heading-bottom-margin + .2rem;
+			$heading-top-padding: $heading-top-padding + .2rem;
+		}
+	}
+
+	$heading-scale-factor: $heading-scale-factor + .035;
+}

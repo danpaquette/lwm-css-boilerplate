@@ -1,0 +1,18 @@
+$document-base: 62.5% !default;
+$standard-spacing: 2rem !default;
+
+$base-font-stack: '"Roboto", helvetica, arial, sans-serif' !default;
+$base-font-color: #777 !default;
+$base-font-size: 1.4rem !default;
+$base-line-height: 1.825 !default;
+$base-font-scale: 1.2 !default;
+
+$body-font-size: 1.4em !default; // Fix for font sizing bug in Chromium: https://code.google.com/p/chromium/issues/detail?id=320754
+
+$media-queries: (
+	xs: 'all and (min-width: 25em)',
+	sm: 'all and (min-width: 32.5em)',
+	md: 'all and (min-width: 45em)',
+	lg: 'all and (min-width: 62.5em)',
+	xl: 'all and (min-width: 77.5em)'
+) !default;
