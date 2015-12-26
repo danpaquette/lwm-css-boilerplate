@@ -50,6 +50,7 @@ module.exports = function(grunt) {
 					"dist/lists.min.css" : "src/lists.scss",
 					"dist/tables.min.css" : "src/tables.scss",
 					"dist/typography.min.css" : "src/typography.scss",
+					"dist/headings.min.css" : "src/headings.scss",
 					"dist/forms.min.css" : "src/forms.scss"
 				}
 			}
