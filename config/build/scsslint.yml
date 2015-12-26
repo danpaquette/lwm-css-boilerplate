@@ -150,6 +150,7 @@ linters:
     max_depth: 7
 
   SelectorFormat:
+    ignored_names: [img, q]
     enabled: true
     convention: [hyphenated_lowercase] # or 'strict_BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
 

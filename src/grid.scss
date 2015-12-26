@@ -3,41 +3,29 @@
 // **************************************************************************
 //
 // GRID
-// 01. Settings
-// 02. Row Default
-// 03. Row Alignment
-// 04. Column Defaults
-// 05. Standard Grid
-// 06. Tile Grid
-// 07. Collapsed Grid
-//
-// **************************************************************************
-
-// **************************************************************************
-//
-// 01. Settings
+// 01. Row Default
+// 02. Row Alignment
+// 03. Column Defaults
+// 04. Standard Grid
+// 05. Tile Grid
+// 06. Collapsed Grid
 //
 // **************************************************************************
 
 $column-count: 12 !default;
-$gutter-width: $standard-spacing !default;
+$gutter-width: 2rem !default;
 
-// Optional Generators
-
-$generate-grid-debug: true !default;
 $generate-order: true !default;
 $generate-push-pull: true !default;
 $generate-prefix-suffix: true !default;
 $generate-collapsed-grid: true !default;
 
-// Tile Grid
-
-$generate-tile-grid: true;
-$tile-count: 15;
+$generate-tile-grid: true !default;
+$tile-count: 15 !default;
 
 // **************************************************************************
 //
-// 02. Row Defaults
+// 01. Row Defaults
 //
 // **************************************************************************
 
@@ -51,7 +39,7 @@ $tile-count: 15;
 
 // **************************************************************************
 //
-// 03. Row Alignment
+// 02. Row Alignment
 //
 // **************************************************************************
 
@@ -85,7 +73,7 @@ $tile-count: 15;
 
 // **************************************************************************
 //
-// 04. Column Defaults
+// 03. Column Defaults
 //
 // **************************************************************************
 
@@ -93,22 +81,22 @@ $tile-count: 15;
 	width: 100%;
 }
 
-.row > .col {
+.row > [class*="col-"] {
 	padding-left: $gutter-width/2;
 	padding-right: $gutter-width/2;
 }
 
 @if($generate-push-pull) {
 
-	.col.push,
-	.col.pull {
+	[class*="col-"].push,
+	[class*="col-"].pull {
 		position: relative;
 	}
 }
 
 // **************************************************************************
 //
-// 05. Standard Grid
+// 04. Standard Grid
 //
 // **************************************************************************
 
@@ -137,11 +125,11 @@ $tile-count: 15;
 
 			@if($generate-push-pull) {
 
-				.push-#{$media-query-name}-#{$i} {
+				[class*="col-"].push-#{$media-query-name}-#{$i} {
 					right: 100%/$column-count*$i;
 				}
 
-				.pull-#{$media-query-name}-#{$i} {
+				[class*="col-"].pull-#{$media-query-name}-#{$i} {
 					left: 100%/$column-count*$i;
 				}
 			}
@@ -150,11 +138,11 @@ $tile-count: 15;
 
 			@if($generate-prefix-suffix) {
 
-				.prefix-#{$media-query-name}-#{$i} {
+				[class*="col-"].prefix-#{$media-query-name}-#{$i} {
 					margin-left: 100%/$column-count*$i;
 				}
 
-				.suffix-#{$media-query-name}-#{$i} {
+				[class*="col-"].suffix-#{$media-query-name}-#{$i} {
 					margin-right: 100%/$column-count*$i;
 				}
 			}
@@ -164,7 +152,7 @@ $tile-count: 15;
 
 // **************************************************************************
 //
-// 06. Tile Grid
+// 05. Tile Grid
 //
 // **************************************************************************
 
@@ -218,6 +206,7 @@ $tile-count: 15;
 
 				.tile-#{$media-query-name}-#{$i} > * {
 					width: calc((100% / #{$i}) + #{$gutter-width} / #{$i} - #{$gutter-width});
+					margin-bottom: $gutter-width;
 				}
 
 				.tile-#{$media-query-name}-#{$i} > *:nth-child(#{$i}n + #{$i}) {
@@ -230,7 +219,7 @@ $tile-count: 15;
 
 // **************************************************************************
 //
-// 07. Collapsed Grid
+// 06. Collapsed Grid
 //
 // **************************************************************************
 
@@ -240,7 +229,7 @@ $tile-count: 15;
 		margin: 0;
 	}
 
-	.row.collapsed > .row {
+	.row.collapsed > [class*="col-"] {
 		padding: 0;
 	}
 }

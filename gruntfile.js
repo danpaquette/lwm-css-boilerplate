@@ -45,6 +45,8 @@ module.exports = function(grunt) {
 					"dist/grid.min.css" : "src/grid.scss",
 					"dist/buttons.min.css" : "src/buttons.scss",
 					"dist/code.min.css" : "src/code.scss",
+					"dist/media.min.css" : "src/media.scss",
+					"dist/quotes.min.css" : "src/quotes.scss",
 					"dist/lists.min.css" : "src/lists.scss",
 					"dist/tables.min.css" : "src/tables.scss",
 					"dist/typography.min.css" : "src/typography.scss",

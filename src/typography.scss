@@ -4,22 +4,165 @@
 //
 // TYPOGRAPHY
 //
-// 01. Headings
+// 01. Typography Defaults
+// 02. Anchors
+// 03. Selection Reset
+// 04. Block Level Elements
+// 05. Inline Elements
+// 06. Headings
 //
 // **************************************************************************
 
-// **************************************************************************
-//
-// 01. Headings
-//
-// **************************************************************************
+$typography-html-base: 62.5% !default;
 
-$headings: 6 !default;
+$typography-global-margin-bottom: 2rem !default;
+$typography-global-font-size: 1.4rem !default;
+
+$typography-body-line-height: 1.825 !default;
+$typography-body-font-stack: '"Roboto", helvetica, arial, sans-serif' !default;
+$typography-body-font-color: #777 !default;
+$typography-body-font-size: 1.4em !default; // Fix for font sizing bug in Chromium: https://code.google.com/p/chromium/issues/detail?id=320754
+
+$typography-anchor-color: $blue;
+$typography-anchor-hover: darken($typography-anchor-color, 15%) !default;
+$typography-selection-color: rgba($blue, .4) !default;
+$typography-hr-color: rgba(255, 255, 255, .25) !default;
+
+$heading-count: 6 !default;
 $heading-scale-factor: 1.05 !default;
-$heading-font-size: $base-font-size !default;
-$heading-line-height: $base-line-height !default;
-$heading-bottom-margin: $standard-spacing !default;
-$heading-top-padding: 0 !default;
+$heading-font-size: $typography-body-font-size !default;
+$heading-line-height: $typography-body-line-height !default;
+$heading-margin-bottom: $typography-global-margin-bottom !default;
+$heading-padding-top: 0 !default;
+
+// **************************************************************************
+//
+// 01. Typography Defaults
+//
+// **************************************************************************
+
+html {
+	font-size: $typography-html-base;
+}
+
+body {
+	color: $typography-body-font-color;
+	font-family: #{$typography-body-font-stack};
+	font-size: $typography-body-font-size;
+	line-height: $typography-body-line-height;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: auto;
+}
+
+// **************************************************************************
+//
+// 02. Anchors
+//
+// **************************************************************************
+
+a {
+	background: transparent;
+	color: $typography-anchor-color;
+	cursor: pointer;
+	outline: 0;
+	text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+	text-decoration: none;
+	color: $typography-anchor-hover;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+	box-shadow: none;
+	outline: 0;
+}
+
+// **************************************************************************
+//
+// 03. Selection Reset
+//
+// **************************************************************************
+
+::selection {
+	background: $typography-selection-color;
+	text-shadow: none;
+}
+
+// **************************************************************************
+//
+// 04. Block Level Elements
+//
+// **************************************************************************
+
+p {
+	margin: 0 0 $typography-global-margin-bottom;
+	padding: 0;
+}
+
+address {
+	font-style: normal;
+	margin: 0 0 $typography-global-margin-bottom;
+	padding: 0;
+}
+
+hr {
+	display: block;
+	margin: $typography-global-margin-bottom/2 0 $typography-global-margin-bottom;
+	padding: 0;
+	border: 0;
+	background: $typography-hr-color;
+	height: 1px;
+	position: relative;
+	z-index: 1;
+	top: -1px;
+}
+
+// **************************************************************************
+//
+// 05. Inline Elements
+//
+// **************************************************************************
+
+abbr,
+dfn {
+	font-style: normal;
+	border: 0;
+	border-bottom: 1px dotted $typography-body-font-color;
+	cursor: help;
+}
+
+ins,
+mark {
+	text-decoration: none;
+}
+
+mark {
+	background: lighten($blue, 42%);
+	color: inherit;
+}
+
+ins {
+	background: lighten($green, 45%);
+	color: inherit;
+}
+
+del {
+	background: transparent;
+	text-decoration: line-through;
+	color: darken($red, 20%);
+}
+
+// **************************************************************************
+//
+// 06. Headings
+//
+// **************************************************************************
 
 h1,
 h2,
@@ -29,27 +172,27 @@ h5,
 h6 {
 	padding: 0;
 	font-weight: normal;
-	margin: 0 0 #{$standard-spacing} 0;
+	margin: 0 0 $typography-global-margin-bottom;
 }
 
 @each $media-query-name, $media-query-value in $media-queries {
 
 	@media #{$media-query-value} {
 
-		@while $headings > 0 {
+		@while $heading-count > 0 {
 
-			h#{$headings} {
+			h#{$heading-count} {
 				font-size: $heading-font-size;
 				line-height: $heading-line-height;
-				margin-bottom: $heading-bottom-margin;
-				padding-top: $heading-top-padding;
+				margin-bottom: $heading-margin-bottom;
+				padding-top: $heading-padding-top;
 			}
 
-			$headings: $headings - 1;
+			$heading-count: $heading-count - 1;
 			$heading-font-size: $heading-font-size * $heading-scale-factor;
-			$heading-line-height: $heading-line-height - .1rem;
-			$heading-bottom-margin: $heading-bottom-margin + .2rem;
-			$heading-top-padding: $heading-top-padding + .2rem;
+			$heading-line-height: $heading-line-height - .1;
+			$heading-margin-bottom: $heading-margin-bottom + .2rem;
+			$heading-padding-top: $heading-padding-top + .2rem;
 		}
 	}
 

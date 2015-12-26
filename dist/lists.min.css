@@ -1,0 +1,22 @@
+ul,
+ol {
+  list-style-position: outside;
+  padding: 0 0 0 2rem;
+  margin: 0 0 2rem; }
+
+li {
+  margin: 0;
+  padding: 0; }
+
+dl {
+  margin: 0 0 2rem;
+  padding: 0; }
+
+dd {
+  margin: 0 0 0 2rem;
+  padding: 0; }
+
+dt {
+  font-weight: bold;
+  margin: 0;
+  padding: 0; }

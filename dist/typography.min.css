@@ -1,3 +1,86 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #777;
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-size: 1.4em;
+  line-height: 1.825;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto; }
+
+a {
+  background: transparent;
+  color: #3498db;
+  cursor: pointer;
+  outline: 0;
+  text-decoration: none; }
+
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: #1d6fa5; }
+
+a,
+a:hover,
+a:active,
+a:focus {
+  box-shadow: none;
+  outline: 0; }
+
+::-moz-selection {
+  background: rgba(52, 152, 219, 0.4);
+  text-shadow: none; }
+
+::selection {
+  background: rgba(52, 152, 219, 0.4);
+  text-shadow: none; }
+
+p {
+  margin: 0 0 2rem;
+  padding: 0; }
+
+address {
+  font-style: normal;
+  margin: 0 0 2rem;
+  padding: 0; }
+
+hr {
+  display: block;
+  margin: 1rem 0 2rem;
+  padding: 0;
+  border: 0;
+  background: rgba(255, 255, 255, 0.25);
+  height: 1px;
+  position: relative;
+  z-index: 1;
+  top: -1px; }
+
+abbr,
+dfn {
+  font-style: normal;
+  border: 0;
+  border-bottom: 1px dotted #777;
+  cursor: help; }
+
+ins,
+mark {
+  text-decoration: none; }
+
+mark {
+  background: #eaf4fb;
+  color: inherit; }
+
+ins {
+  background: #ecf8ec;
+  color: inherit; }
+
+del {
+  background: transparent;
+  text-decoration: line-through;
+  color: #9a1612; }
+
 h1,
 h2,
 h3,
@@ -6,164 +89,164 @@ h5,
 h6 {
   padding: 0;
   font-weight: normal;
-  margin: 0 0 2rem 0; }
+  margin: 0 0 2rem; }
 
 @media all and (min-width: 25em) {
   h6 {
-    font-size: 1.4rem;
+    font-size: 1.4em;
     line-height: 1.825;
     margin-bottom: 2rem;
     padding-top: 0; }
   h5 {
-    font-size: 1.47rem;
-    line-height: 1.725rem;
+    font-size: 1.47em;
+    line-height: 1.725;
     margin-bottom: 2.2rem;
     padding-top: 0.2rem; }
   h4 {
-    font-size: 1.5435rem;
-    line-height: 1.625rem;
+    font-size: 1.5435em;
+    line-height: 1.625;
     margin-bottom: 2.4rem;
     padding-top: 0.4rem; }
   h3 {
-    font-size: 1.620675rem;
-    line-height: 1.525rem;
+    font-size: 1.620675em;
+    line-height: 1.525;
     margin-bottom: 2.6rem;
     padding-top: 0.6rem; }
   h2 {
-    font-size: 1.70170875rem;
-    line-height: 1.425rem;
+    font-size: 1.70170875em;
+    line-height: 1.425;
     margin-bottom: 2.8rem;
     padding-top: 0.8rem; }
   h1 {
-    font-size: 1.7867941875rem;
-    line-height: 1.325rem;
+    font-size: 1.7867941875em;
+    line-height: 1.325;
     margin-bottom: 3rem;
     padding-top: 1rem; } }
 
 @media all and (min-width: 32.5em) {
   h6 {
-    font-size: 1.4rem;
+    font-size: 1.4em;
     line-height: 1.825;
     margin-bottom: 2rem;
     padding-top: 0; }
   h5 {
-    font-size: 1.519rem;
-    line-height: 1.725rem;
+    font-size: 1.519em;
+    line-height: 1.725;
     margin-bottom: 2.2rem;
     padding-top: 0.2rem; }
   h4 {
-    font-size: 1.648115rem;
-    line-height: 1.625rem;
+    font-size: 1.648115em;
+    line-height: 1.625;
     margin-bottom: 2.4rem;
     padding-top: 0.4rem; }
   h3 {
-    font-size: 1.788204775rem;
-    line-height: 1.525rem;
+    font-size: 1.788204775em;
+    line-height: 1.525;
     margin-bottom: 2.6rem;
     padding-top: 0.6rem; }
   h2 {
-    font-size: 1.9402021809rem;
-    line-height: 1.425rem;
+    font-size: 1.9402021809em;
+    line-height: 1.425;
     margin-bottom: 2.8rem;
     padding-top: 0.8rem; }
   h1 {
-    font-size: 2.1051193662rem;
-    line-height: 1.325rem;
+    font-size: 2.1051193662em;
+    line-height: 1.325;
     margin-bottom: 3rem;
     padding-top: 1rem; } }
 
 @media all and (min-width: 45em) {
   h6 {
-    font-size: 1.4rem;
+    font-size: 1.4em;
     line-height: 1.825;
     margin-bottom: 2rem;
     padding-top: 0; }
   h5 {
-    font-size: 1.568rem;
-    line-height: 1.725rem;
+    font-size: 1.568em;
+    line-height: 1.725;
     margin-bottom: 2.2rem;
     padding-top: 0.2rem; }
   h4 {
-    font-size: 1.75616rem;
-    line-height: 1.625rem;
+    font-size: 1.75616em;
+    line-height: 1.625;
     margin-bottom: 2.4rem;
     padding-top: 0.4rem; }
   h3 {
-    font-size: 1.9668992rem;
-    line-height: 1.525rem;
+    font-size: 1.9668992em;
+    line-height: 1.525;
     margin-bottom: 2.6rem;
     padding-top: 0.6rem; }
   h2 {
-    font-size: 2.202927104rem;
-    line-height: 1.425rem;
+    font-size: 2.202927104em;
+    line-height: 1.425;
     margin-bottom: 2.8rem;
     padding-top: 0.8rem; }
   h1 {
-    font-size: 2.4672783565rem;
-    line-height: 1.325rem;
+    font-size: 2.4672783565em;
+    line-height: 1.325;
     margin-bottom: 3rem;
     padding-top: 1rem; } }
 
 @media all and (min-width: 62.5em) {
   h6 {
-    font-size: 1.4rem;
+    font-size: 1.4em;
     line-height: 1.825;
     margin-bottom: 2rem;
     padding-top: 0; }
   h5 {
-    font-size: 1.617rem;
-    line-height: 1.725rem;
+    font-size: 1.617em;
+    line-height: 1.725;
     margin-bottom: 2.2rem;
     padding-top: 0.2rem; }
   h4 {
-    font-size: 1.867635rem;
-    line-height: 1.625rem;
+    font-size: 1.867635em;
+    line-height: 1.625;
     margin-bottom: 2.4rem;
     padding-top: 0.4rem; }
   h3 {
-    font-size: 2.157118425rem;
-    line-height: 1.525rem;
+    font-size: 2.157118425em;
+    line-height: 1.525;
     margin-bottom: 2.6rem;
     padding-top: 0.6rem; }
   h2 {
-    font-size: 2.4914717809rem;
-    line-height: 1.425rem;
+    font-size: 2.4914717809em;
+    line-height: 1.425;
     margin-bottom: 2.8rem;
     padding-top: 0.8rem; }
   h1 {
-    font-size: 2.8776499069rem;
-    line-height: 1.325rem;
+    font-size: 2.8776499069em;
+    line-height: 1.325;
     margin-bottom: 3rem;
     padding-top: 1rem; } }
 
 @media all and (min-width: 77.5em) {
   h6 {
-    font-size: 1.4rem;
+    font-size: 1.4em;
     line-height: 1.825;
     margin-bottom: 2rem;
     padding-top: 0; }
   h5 {
-    font-size: 1.666rem;
-    line-height: 1.725rem;
+    font-size: 1.666em;
+    line-height: 1.725;
     margin-bottom: 2.2rem;
     padding-top: 0.2rem; }
   h4 {
-    font-size: 1.98254rem;
-    line-height: 1.625rem;
+    font-size: 1.98254em;
+    line-height: 1.625;
     margin-bottom: 2.4rem;
     padding-top: 0.4rem; }
   h3 {
-    font-size: 2.3592226rem;
-    line-height: 1.525rem;
+    font-size: 2.3592226em;
+    line-height: 1.525;
     margin-bottom: 2.6rem;
     padding-top: 0.6rem; }
   h2 {
-    font-size: 2.807474894rem;
-    line-height: 1.425rem;
+    font-size: 2.807474894em;
+    line-height: 1.425;
     margin-bottom: 2.8rem;
     padding-top: 0.8rem; }
   h1 {
-    font-size: 3.3408951239rem;
-    line-height: 1.325rem;
+    font-size: 3.3408951239em;
+    line-height: 1.325;
     margin-bottom: 3rem;
     padding-top: 1rem; } }
