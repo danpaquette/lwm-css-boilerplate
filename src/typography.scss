@@ -12,17 +12,9 @@
 //
 // **************************************************************************
 
+$typography-margin-bottom: 2rem !default;
 $typography-html-base: 62.5% !default;
-
-$typography-global-margin-bottom: 2rem !default;
-$typography-global-font-size: 1.4rem !default;
-
-$typography-body-line-height: 1.825 !default;
-$typography-body-font-stack: '"Roboto", helvetica, arial, sans-serif' !default;
-$typography-body-font-color: #777 !default;
-$typography-body-font-size: 1.4em !default; // Fix for font sizing bug in Chromium: https://code.google.com/p/chromium/issues/detail?id=320754
-
-$typography-anchor-color: $blue;
+$typography-anchor-color: $blue !default;
 $typography-anchor-hover: darken($typography-anchor-color, 15%) !default;
 $typography-selection-color: rgba($blue, .4) !default;
 $typography-hr-color: rgba(255, 255, 255, .25) !default;
@@ -38,10 +30,10 @@ html {
 }
 
 body {
-	color: $typography-body-font-color;
-	font-family: #{$typography-body-font-stack};
-	font-size: $typography-body-font-size;
-	line-height: $typography-body-line-height;
+	color: $global-typography-font-color;
+	font-family: #{$global-typography-font-stack};
+	font-size: $global-body-font-size;
+	line-height: $global-typography-line-height;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: auto;
 }
@@ -93,19 +85,19 @@ a:focus {
 // **************************************************************************
 
 p {
-	margin: 0 0 $typography-global-margin-bottom;
+	margin: 0 0 $typography-margin-bottom;
 	padding: 0;
 }
 
 address {
 	font-style: normal;
-	margin: 0 0 $typography-global-margin-bottom;
+	margin: 0 0 $typography-margin-bottom;
 	padding: 0;
 }
 
 hr {
 	display: block;
-	margin: $typography-global-margin-bottom/2 0 $typography-global-margin-bottom;
+	margin: $typography-margin-bottom/2 0 $typography-margin-bottom;
 	padding: 0;
 	border: 0;
 	background: $typography-hr-color;
@@ -125,7 +117,7 @@ abbr,
 dfn {
 	font-style: normal;
 	border: 0;
-	border-bottom: 1px dotted $typography-body-font-color;
+	border-bottom: 1px dotted $global-typography-font-color;
 	cursor: help;
 }
 

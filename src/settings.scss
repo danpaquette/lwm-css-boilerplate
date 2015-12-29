@@ -1,10 +1,59 @@
-$white: #fff;
+// **************************************************************************
+//
+// SETTINGS
+//
+// 01. Typography Globals
+// 02. Colors
+// 03. States
+// 04. Media Queries
+//
+// **************************************************************************
+
+// **************************************************************************
+//
+// 01. Typography Globals
+//
+// **************************************************************************
+
+$global-typography-font-size: 1.4rem !default;
+$global-body-font-size: 1.4em !default; // Fix for font sizing bug in Chromium: https://code.google.com/p/chromium/issues/detail?id=320754
+$global-typography-line-height: 1.825 !default;
+$global-typography-font-stack: '"Roboto", helvetica, arial, sans-serif' !default;
+$global-typography-font-color: #777 !default;
+
+// **************************************************************************
+//
+// 02. Colors
+//
+// **************************************************************************
+
+$white: #fff !default;
 $red: #e6312c !default;
 $orange: #ef6c00 !default;
 $yellow: #f9a825 !default;
 $green: #42bd44 !default;
 $blue: #3498db !default;
 $purple: #7842b1 !default;
+
+// **************************************************************************
+//
+// 03. States
+//
+// **************************************************************************
+
+$states: (
+	primary: $orange,
+	success: $green,
+	notice: $blue,
+	warning: $yellow,
+	error: $red
+) !default;
+
+// **************************************************************************
+//
+// 04. Media Queries
+//
+// **************************************************************************
 
 $media-queries: (
 	xs: 'all and (min-width: 25em)',

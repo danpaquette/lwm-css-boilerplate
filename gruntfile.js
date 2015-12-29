@@ -51,7 +51,9 @@ module.exports = function(grunt) {
 					"dist/tables.min.css" : "src/tables.scss",
 					"dist/typography.min.css" : "src/typography.scss",
 					"dist/headings.min.css" : "src/headings.scss",
-					"dist/forms.min.css" : "src/forms.scss"
+					"dist/forms.min.css" : "src/forms.scss",
+					"dist/meter.min.css" : "src/meter.scss",
+					"dist/progress.min.css" : "src/progress.scss"
 				}
 			}
 		},

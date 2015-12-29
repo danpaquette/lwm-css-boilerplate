@@ -1,0 +1,73 @@
+@import 'settings';
+
+// **************************************************************************
+//
+// PROGRESS
+//
+// 01. Progress Defaults
+// 02. Webkit
+// 03. Mozilla
+//
+// **************************************************************************
+
+$progress-background-color: #dfdfdf;
+$progress-default-bar-color: #aaa;
+$progress-height: 1rem;
+
+// **************************************************************************
+//
+// 01. Progress Defaults
+//
+// **************************************************************************
+
+progress {
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	border: 0;
+	vertical-align: baseline;
+	height: $progress-height;
+	background: $progress-background-color;
+}
+
+// **************************************************************************
+//
+// 02. Webkit
+//
+// **************************************************************************
+
+progress::-webkit-progress-bar {
+	width: 100%;
+	display: block;
+	height: 1rem;
+	background: $progress-background-color;
+	overflow: hidden;
+}
+
+progress::-webkit-progress-value {
+	background-color: $progress-default-bar-color;
+	height: $progress-height;
+}
+
+@each $state, $color in $states {
+	progress.#{$state}::-webkit-progress-value {
+		background-color: $color;
+	}
+}
+
+// **************************************************************************
+//
+// 03. Mozilla
+//
+// **************************************************************************
+
+progress::-moz-progress-bar {
+	background-color: $progress-default-bar-color;
+	height: $progress-height;
+}
+
+@each $state, $color in $states {
+	progress.#{$state}::-moz-progress-bar {
+		background-color: $color;
+	}
+}

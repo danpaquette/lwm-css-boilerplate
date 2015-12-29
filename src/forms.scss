@@ -1,0 +1,293 @@
+@import 'settings';
+
+// **************************************************************************
+//
+// FORMS
+//
+// Qualifying elements are usex extensively as they pertain to form elements.
+// scss-lint:disable QualifyingElement
+//
+// 01. Form Defaults
+// 02. Input Defaults
+// 03. Input Focus
+// 04. Input Read-Only
+// 05. Input Disabled
+// 07. Radio Buttons & Checkboxes
+// 08. Form Buttons
+//
+// **************************************************************************
+
+$input-height: 3rem;
+$input-padding-top-bottom: .8rem;
+$input-padding-right-left: .4rem;
+$input-background-color: #fff;
+$input-border-color: #dfdfdf;
+
+$textarea-min-height: 15rem;
+$textarea-line-height: 1.5;
+
+// **************************************************************************
+//
+// 01. Form Defaults
+//
+// **************************************************************************
+
+button,
+input,
+select,
+textarea,
+optgroup {
+	color: $global-typography-font-color;
+	font-family: #{$global-typography-font-stack};
+	font-size: $global-typography-font-size;
+	line-height: $global-typography-line-height;
+}
+
+form,
+legend,
+fieldset, {
+	display: block;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+label,
+output {
+	display: block;
+}
+
+// **************************************************************************
+//
+// 02. Input Defaults
+//
+// **************************************************************************
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea {
+	display: block;
+	min-width: 0;
+	width: 100%;
+	border-radius: 0;
+	padding: $input-padding-top-bottom $input-padding-right-left;
+	height: $input-height;
+	appearance: none;
+	vertical-align: middle;
+	overflow: visible;
+	z-index: auto;
+	border: 1px solid $input-border-color;
+	background-color: $input-background-color;
+	cursor: pointer;
+}
+
+select {
+	padding-right: 2.5rem;
+	background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6px" height="10px" viewBox="0 0 6 10" enable-background="new 0 0 6 10" xml:space="preserve"><polygon fill="#bcbcbc" points="0,4 3,0 6,4 "/><polygon fill="#bcbcbc" points="6,6 3,10 0,6 "/></svg> ');
+	background-repeat: no-repeat;
+	background-position: calc(100% - 9px) center;
+}
+
+select[size]:not(select[size="1"]),
+select[multiple] {
+	height: auto;
+	overflow: auto;
+	padding: $input-padding-top-bottom $input-padding-right-left;
+	background: none;
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+	resize: vertical;
+	min-height: $textarea-min-height;
+	line-height: $textarea-line-height;
+}
+
+// Disable default Webkit search chrome.
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
+}
+
+// **************************************************************************
+//
+// 03. Input Focus
+//
+// **************************************************************************
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+select:focus,
+textarea:focus {
+	outline: 0;
+	border-color: $blue;
+	background-color: $input-background-color;
+}
+
+// **************************************************************************
+//
+// 04. Input Read-Only
+//
+// **************************************************************************
+
+input[type="text"][readonly],
+input[type="password"][readonly],
+input[type="email"][readonly],
+input[type="url"][readonly],
+input[type="date"][readonly],
+input[type="month"][readonly],
+input[type="time"][readonly],
+input[type="datetime"][readonly],
+input[type="datetime-local"][readonly],
+input[type="week"][readonly],
+input[type="number"][readonly],
+input[type="search"][readonly],
+input[type="tel"][readonly],
+input[type="color"][readonly],
+select[readonly],
+textarea[readonly] {
+	opacity: .5;
+	cursor: text;
+	background-color: $input-background-color;
+	border-color: $input-border-color;
+	color: $global-typography-font-color;
+}
+
+// **************************************************************************
+//
+// 05. Input Disabled
+//
+// **************************************************************************
+
+input[type="text"][disabled],
+input[type="password"][disabled],
+input[type="email"][disabled],
+input[type="url"][disabled],
+input[type="date"][disabled],
+input[type="month"][disabled],
+input[type="time"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="week"][disabled],
+input[type="number"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="color"][disabled],
+select[disabled],
+textarea[disabled] {
+	opacity: .5;
+	cursor: not-allowed;
+	background-color: $input-background-color;
+	border-color: $input-border-color;
+	color: $global-typography-font-color;
+}
+
+// **************************************************************************
+//
+// 06. Input States
+//
+// **************************************************************************
+
+@each $state, $color in $states {
+	input[type="text"].#{$state},
+	input[type="password"].#{$state},
+	input[type="email"].#{$state},
+	input[type="url"].#{$state},
+	input[type="date"].#{$state},
+	input[type="month"].#{$state},
+	input[type="time"].#{$state},
+	input[type="datetime"].#{$state},
+	input[type="datetime-local"].#{$state},
+	input[type="week"].#{$state},
+	input[type="number"].#{$state},
+	input[type="search"].#{$state},
+	input[type="tel"].#{$state},
+	input[type="color"].#{$state},
+	select.#{$state},
+	textarea.#{$state} {
+		border-color: $color;
+	}
+}
+
+// **************************************************************************
+//
+// 07. Radio Buttons & Checkboxes
+//
+// **************************************************************************
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0 .5rem 0 0;
+	width: auto;
+	line-height: 1.5;
+	vertical-align: middle;
+	cursor: pointer;
+	overflow: visible;
+	position: relative;
+	top: -2px;
+}
+
+// Disabled
+
+input[type="checkbox"][disabled],
+input[type="radio"][disabled] {
+	cursor: not-allowed;
+}
+
+// **************************************************************************
+//
+// 08. Form Buttons
+//
+// **************************************************************************
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: none;
+	white-space: normal;
+	width: auto;
+	margin: 0;
+	vertical-align: middle;
+	line-height: normal;
+	overflow: visible;
+}
+
+button[disabled],
+input[type="button"][disabled],
+input[type="reset"][disabled],
+input[type="submit"][disabled] {
+	cursor: not-allowed;
+}

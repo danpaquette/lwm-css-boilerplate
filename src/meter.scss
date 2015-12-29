@@ -1,0 +1,93 @@
+@import 'settings';
+
+// **************************************************************************
+//
+// METER
+//
+// 01. Meter Defaults
+// 02. Webkit
+// 03. Mozilla
+//
+// **************************************************************************
+
+$meter-background-color: #dfdfdf;
+$meter-default-bar-color: #aaa;
+$meter-height: 1rem;
+
+// **************************************************************************
+//
+// 01. Meter Defaults
+//
+// **************************************************************************
+
+meter {
+	appearance: none;
+	width: 100%;
+	display: block;
+	height: $meter-height;
+	background: $meter-background-color;
+}
+
+// **************************************************************************
+//
+// 01. Webkit
+//
+// **************************************************************************
+
+meter::-webkit-meter-bar {
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	height: $meter-height;
+	background: $meter-background-color;
+}
+
+meter::-webkit-meter-optimum-value,
+meter::-webkit-meter-suboptimum-value,
+meter::-webkit-meter-even-less-good-value {
+	background: $meter-default-bar-color none;
+}
+
+meter::-webkit-meter-optimum-value {
+	background-color: $green;
+}
+
+meter::-webkit-meter-suboptimum-value {
+	background-color: $yellow;
+}
+
+meter::-webkit-meter-even-less-good-value {
+	background-color: $red;
+}
+
+// **************************************************************************
+//
+// 01. Mozilla
+//
+// **************************************************************************
+
+meter::-moz-meter-bar {
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	height: $meter-height;
+	background: $meter-background-color;
+}
+
+meter:-moz-meter-optimum::-moz-meter-bar,
+meter:-moz-meter-sub-optimum::-moz-meter-bar,
+meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+	background: $meter-default-bar-color;
+}
+
+meter:-moz-meter-optimum::-moz-meter-bar {
+	background: $green;
+}
+
+meter:-moz-meter-sub-optimum::-moz-meter-bar {
+	background: $yellow;
+}
+
+meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+	background: $red;
+}
