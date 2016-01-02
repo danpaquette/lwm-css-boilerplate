@@ -1,45 +1,37 @@
-@import 'settings';
-
 // **************************************************************************
 //
-// LISTS
+// QUOTES
 //
-// 01. Standard Lists
+// 01. Quote Defaults
 //
 // **************************************************************************
 
-$list-margin-bottom: 2rem;
+$blockquote-margin-bottom: 2rem;
 
 // **************************************************************************
 //
-// 01. Standard Lists
+// 01. Quote Defaults
 //
 // **************************************************************************
 
-ul,
-ol {
-	list-style-position: outside;
-	padding: 0 0 0 $list-margin-bottom;
-	margin: 0 0 $list-margin-bottom;
-}
-
-li {
+q {
+	quotes: '\201C' '\201D' '\2018' '\2019 ';
 	margin: 0;
 	padding: 0;
 }
 
-dl {
-	margin: 0 0 $list-margin-bottom;
-	padding: 0;
+cite {
+	font-style: normal;
 }
 
-dd {
-	margin: 0 0 0 $list-margin-bottom;
-	padding: 0;
+blockquote:before,
+blockquote:after {
+	content: none;
 }
 
-dt {
-	font-weight: bold;
-	margin: 0;
+blockquote {
 	padding: 0;
+	margin: 0 0 $blockquote-margin-bottom;
+	quotes: none;
+	font-style: normal;
 }

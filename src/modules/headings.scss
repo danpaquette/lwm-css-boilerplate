@@ -1,8 +1,9 @@
-@import 'settings';
-
 // **************************************************************************
 //
 // HEADINGS
+//
+// 01. Heading Defaults
+// 02. Responsive Headings
 //
 // **************************************************************************
 
@@ -12,6 +13,12 @@ $heading-margin-bottom: 2rem !default;
 $heading-padding-top: 0 !default;
 $heading-scale-factor: 1.05 !default;
 $heading-count: 6 !default;
+
+// **************************************************************************
+//
+// 01. Heading Defaults
+//
+// **************************************************************************
 
 h1,
 h2,
@@ -23,6 +30,12 @@ h6 {
 	font-weight: normal;
 	margin: 0 0 $heading-margin-bottom;
 }
+
+// **************************************************************************
+//
+// 02. Responsive Headings
+//
+// **************************************************************************
 
 @each $media-query-name, $media-query-value in $media-queries {
 

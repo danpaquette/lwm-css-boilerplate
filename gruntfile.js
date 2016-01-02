@@ -41,19 +41,7 @@ module.exports = function(grunt) {
 			},
 			src: {
 				files: {
-					"dist/main.min.css" : "src/main.scss",
-					"dist/grid.min.css" : "src/grid.scss",
-					"dist/buttons.min.css" : "src/buttons.scss",
-					"dist/code.min.css" : "src/code.scss",
-					"dist/media.min.css" : "src/media.scss",
-					"dist/quotes.min.css" : "src/quotes.scss",
-					"dist/lists.min.css" : "src/lists.scss",
-					"dist/tables.min.css" : "src/tables.scss",
-					"dist/typography.min.css" : "src/typography.scss",
-					"dist/headings.min.css" : "src/headings.scss",
-					"dist/forms.min.css" : "src/forms.scss",
-					"dist/meter.min.css" : "src/meter.scss",
-					"dist/progress.min.css" : "src/progress.scss"
+					"dist/lwm.min.css" : "src/init.scss"
 				}
 			}
 		},
@@ -84,9 +72,9 @@ module.exports = function(grunt) {
 			},
 			main: {
 				files: {
-					"dist/main.min.css": [
+					"dist/lwm.min.css": [
 						"bower_components/normalize-css/normalize.css",
-						"dist/main.min.css"
+						"dist/lwm.min.css"
 					]
 				}
 			}

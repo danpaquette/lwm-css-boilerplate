@@ -1,8 +1,7 @@
-@import 'settings';
-
 // **************************************************************************
 //
 // GRID
+//
 // 01. Row Default
 // 02. Row Alignment
 // 03. Column Defaults
@@ -14,14 +13,14 @@
 
 $column-count: 12 !default;
 $gutter-width: 2rem !default;
+$tile-count: 15 !default;
 
 $generate-order: true !default;
 $generate-push-pull: true !default;
 $generate-prefix-suffix: true !default;
 $generate-collapsed-grid: true !default;
-
 $generate-tile-grid: true !default;
-$tile-count: 15 !default;
+
 
 // **************************************************************************
 //

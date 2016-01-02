@@ -1,10 +1,8 @@
-@import 'settings';
-
 // **************************************************************************
 //
 // FORMS
 //
-// Qualifying elements are usex extensively as they pertain to form elements.
+// Qualifying elements are used extensively as they pertain to form elements.
 // scss-lint:disable QualifyingElement
 //
 // 01. Form Defaults
@@ -18,8 +16,8 @@
 // **************************************************************************
 
 $input-height: 3rem;
-$input-padding-top-bottom: .8rem;
-$input-padding-right-left: .4rem;
+$input-padding-top-bottom: .2rem;
+$input-padding-right-left: .8rem;
 $input-background-color: #fff;
 $input-border-color: #dfdfdf;
 
@@ -79,6 +77,7 @@ input[type="tel"],
 input[type="color"],
 select,
 textarea {
+	box-sizing: border-box;
 	display: block;
 	min-width: 0;
 	width: 100%;
@@ -91,7 +90,6 @@ textarea {
 	z-index: auto;
 	border: 1px solid $input-border-color;
 	background-color: $input-background-color;
-	cursor: pointer;
 }
 
 select {
@@ -99,6 +97,7 @@ select {
 	background-image: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="6px" height="10px" viewBox="0 0 6 10" enable-background="new 0 0 6 10" xml:space="preserve"><polygon fill="#bcbcbc" points="0,4 3,0 6,4 "/><polygon fill="#bcbcbc" points="6,6 3,10 0,6 "/></svg> ');
 	background-repeat: no-repeat;
 	background-position: calc(100% - 9px) center;
+	cursor: pointer;
 }
 
 select[size]:not(select[size="1"]),

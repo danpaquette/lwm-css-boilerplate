@@ -1,39 +1,36 @@
+// **************************************************************************
+//
+// INIT
+//
+// 01. Settings
+// 02. Modules
+//
+// **************************************************************************
+
+// **************************************************************************
+//
+// 01. Settings
+//
+// **************************************************************************
+
 @import 'settings';
 
 // **************************************************************************
 //
-// DEFAULTS
-//
-// 01. Box Model Reset
-// 02. Declarations
-// 03. Body/HTML Resets
+// 02. Modules
 //
 // **************************************************************************
 
-// **************************************************************************
-//
-// 01. Box Model Reset
-//
-// **************************************************************************
-
-*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
-
-// **************************************************************************
-//
-// 03. Body/HTML Resets
-//
-// **************************************************************************
-
-html {
-	font-size: 100%;
-	min-height: 100%;
-}
-
-body {
-	min-height: 100%;
-	background: $white;
-}
+@import 'modules/body';
+@import 'modules/typography';
+@import 'modules/headings';
+@import 'modules/lists';
+@import 'modules/media';
+@import 'modules/forms';
+@import 'modules/meter';
+@import 'modules/progress';
+@import 'modules/code';
+@import 'modules/quotes';
+@import 'modules/tables';
+@import 'modules/buttons';
+@import 'modules/grid';
