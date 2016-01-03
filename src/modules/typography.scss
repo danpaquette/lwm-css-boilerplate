@@ -24,16 +24,16 @@ $typography-hr-color: rgba(255, 255, 255, .25) !default;
 // **************************************************************************
 
 html {
-	font-size: $typography-html-base;
+  font-size: $typography-html-base;
 }
 
 body {
-	color: $global-typography-font-color;
-	font-family: #{$global-typography-font-stack};
-	font-size: $global-body-font-size;
-	line-height: $global-typography-line-height;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: auto;
+  color: $global-typography-font-color;
+  font-family: #{$global-typography-font-stack};
+  font-size: $global-body-font-size;
+  line-height: $global-typography-line-height;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
 }
 
 // **************************************************************************
@@ -43,26 +43,26 @@ body {
 // **************************************************************************
 
 a {
-	background: transparent;
-	color: $typography-anchor-color;
-	cursor: pointer;
-	outline: 0;
-	text-decoration: none;
+  background: transparent;
+  color: $typography-anchor-color;
+  cursor: pointer;
+  outline: 0;
+  text-decoration: none;
 }
 
 a:hover,
 a:active,
 a:focus {
-	text-decoration: none;
-	color: $typography-anchor-hover;
+  text-decoration: none;
+  color: $typography-anchor-hover;
 }
 
 a,
 a:hover,
 a:active,
 a:focus {
-	box-shadow: none;
-	outline: 0;
+  box-shadow: none;
+  outline: 0;
 }
 
 // **************************************************************************
@@ -72,8 +72,8 @@ a:focus {
 // **************************************************************************
 
 ::selection {
-	background: $typography-selection-color;
-	text-shadow: none;
+  background: $typography-selection-color;
+  text-shadow: none;
 }
 
 // **************************************************************************
@@ -83,26 +83,26 @@ a:focus {
 // **************************************************************************
 
 p {
-	margin: 0 0 $typography-margin-bottom;
-	padding: 0;
+  margin: 0 0 $typography-margin-bottom;
+  padding: 0;
 }
 
 address {
-	font-style: normal;
-	margin: 0 0 $typography-margin-bottom;
-	padding: 0;
+  font-style: normal;
+  margin: 0 0 $typography-margin-bottom;
+  padding: 0;
 }
 
 hr {
-	display: block;
-	margin: $typography-margin-bottom/2 0 $typography-margin-bottom;
-	padding: 0;
-	border: 0;
-	background: $typography-hr-color;
-	height: 1px;
-	position: relative;
-	z-index: 1;
-	top: -1px;
+  display: block;
+  margin: $typography-margin-bottom/2 0 $typography-margin-bottom;
+  padding: 0;
+  border: 0;
+  background: $typography-hr-color;
+  height: 1px;
+  position: relative;
+  z-index: 1;
+  top: -1px;
 }
 
 // **************************************************************************
@@ -113,29 +113,29 @@ hr {
 
 abbr,
 dfn {
-	font-style: normal;
-	border: 0;
-	border-bottom: 1px dotted $global-typography-font-color;
-	cursor: help;
+  font-style: normal;
+  border: 0;
+  border-bottom: 1px dotted $global-typography-font-color;
+  cursor: help;
 }
 
 ins,
 mark {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 mark {
-	background: lighten($blue, 42%);
-	color: inherit;
+  background: lighten($blue, 42%);
+  color: inherit;
 }
 
 ins {
-	background: lighten($green, 45%);
-	color: inherit;
+  background: lighten($green, 45%);
+  color: inherit;
 }
 
 del {
-	background: transparent;
-	text-decoration: line-through;
-	color: darken($red, 20%);
+  background: transparent;
+  text-decoration: line-through;
+  color: darken($red, 20%);
 }

@@ -16,28 +16,28 @@ $list-margin-bottom: 2rem;
 
 ul,
 ol {
-	list-style-position: outside;
-	padding: 0 0 0 $list-margin-bottom;
-	margin: 0 0 $list-margin-bottom;
+  list-style-position: outside;
+  padding: 0 0 0 $list-margin-bottom;
+  margin: 0 0 $list-margin-bottom;
 }
 
 li {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 dl {
-	margin: 0 0 $list-margin-bottom;
-	padding: 0;
+  margin: 0 0 $list-margin-bottom;
+  padding: 0;
 }
 
 dd {
-	margin: 0 0 0 $list-margin-bottom;
-	padding: 0;
+  margin: 0 0 0 $list-margin-bottom;
+  padding: 0;
 }
 
 dt {
-	font-weight: bold;
-	margin: 0;
-	padding: 0;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
 }

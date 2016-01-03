@@ -1,11 +1,12 @@
-# Editor Configuration Normalization
-# http://editorconfig.org/
-
-# Define Root
+##
+#
+# http://editorconfig.org
+#
+# EditorConfig helps developers define and maintain consistent coding styles between different editors and IDEs.
+#
+##
 
 root = true
-
-# All Files
 
 [*]
 charset = utf-8

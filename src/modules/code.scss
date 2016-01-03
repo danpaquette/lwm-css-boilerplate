@@ -22,42 +22,42 @@ kbd,
 samp,
 var,
 pre {
-	margin: 0;
-	padding: 0;
-	line-height: inherit;
-	font-size: inherit;
-	font-family: #{$code-font-stack};
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  font-size: inherit;
+  font-family: #{$code-font-stack};
 }
 
 pre {
-	white-space: pre;
-	display: block;
-	margin-bottom: $code-pre-margin-bottom;
-	overflow-x: auto;
-	padding: $code-pre-margin-bottom;
-	line-height: $code-pre-margin-bottom;
-	background-color: $code-pre-background-color;
-	border: 0;
-	font-size: $code-pre-font-size;
+  white-space: pre;
+  display: block;
+  margin-bottom: $code-pre-margin-bottom;
+  overflow-x: auto;
+  padding: $code-pre-margin-bottom;
+  line-height: $code-pre-margin-bottom;
+  background-color: $code-pre-background-color;
+  border: 0;
+  font-size: $code-pre-font-size;
 }
 
 pre code {
-	display: block;
-	padding: 0;
-	font-size: inherit;
-	line-height: inherit;
-	background-color: transparent;
+  display: block;
+  padding: 0;
+  font-size: inherit;
+  line-height: inherit;
+  background-color: transparent;
 }
 
 var {
-	font-style: normal;
-	font-weight: bold;
+  font-style: normal;
+  font-weight: bold;
 }
 
 var:before {
-	content: '<';
+  content: '<';
 }
 
 var:after {
-	content: '>';
+  content: '>';
 }

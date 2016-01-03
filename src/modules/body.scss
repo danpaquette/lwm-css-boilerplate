@@ -17,7 +17,7 @@
 *,
 *:before,
 *:after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 // **************************************************************************
@@ -27,11 +27,11 @@
 // **************************************************************************
 
 html {
-	font-size: 100%;
-	min-height: 100%;
+  font-size: 100%;
+  min-height: 100%;
 }
 
 body {
-	min-height: 100%;
-	background: $white;
+  min-height: 100%;
+  background: $white;
 }

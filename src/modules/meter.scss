@@ -19,11 +19,11 @@ $meter-height: 1rem;
 // **************************************************************************
 
 meter {
-	appearance: none;
-	width: 100%;
-	display: block;
-	height: $meter-height;
-	background: $meter-background-color;
+  appearance: none;
+  width: 100%;
+  display: block;
+  height: $meter-height;
+  background: $meter-background-color;
 }
 
 // **************************************************************************
@@ -33,29 +33,29 @@ meter {
 // **************************************************************************
 
 meter::-webkit-meter-bar {
-	width: 100%;
-	display: block;
-	overflow: hidden;
-	height: $meter-height;
-	background: $meter-background-color;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  height: $meter-height;
+  background: $meter-background-color;
 }
 
 meter::-webkit-meter-optimum-value,
 meter::-webkit-meter-suboptimum-value,
 meter::-webkit-meter-even-less-good-value {
-	background: $meter-default-bar-color none;
+  background: $meter-default-bar-color none;
 }
 
 meter::-webkit-meter-optimum-value {
-	background-color: $green;
+  background-color: $green;
 }
 
 meter::-webkit-meter-suboptimum-value {
-	background-color: $yellow;
+  background-color: $yellow;
 }
 
 meter::-webkit-meter-even-less-good-value {
-	background-color: $red;
+  background-color: $red;
 }
 
 // **************************************************************************
@@ -65,27 +65,27 @@ meter::-webkit-meter-even-less-good-value {
 // **************************************************************************
 
 meter::-moz-meter-bar {
-	width: 100%;
-	display: block;
-	overflow: hidden;
-	height: $meter-height;
-	background: $meter-background-color;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  height: $meter-height;
+  background: $meter-background-color;
 }
 
 meter:-moz-meter-optimum::-moz-meter-bar,
 meter:-moz-meter-sub-optimum::-moz-meter-bar,
 meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
-	background: $meter-default-bar-color;
+  background: $meter-default-bar-color;
 }
 
 meter:-moz-meter-optimum::-moz-meter-bar {
-	background: $green;
+  background: $green;
 }
 
 meter:-moz-meter-sub-optimum::-moz-meter-bar {
-	background: $yellow;
+  background: $yellow;
 }
 
 meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
-	background: $red;
+  background: $red;
 }

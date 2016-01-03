@@ -26,9 +26,9 @@ h3,
 h4,
 h5,
 h6 {
-	padding: 0;
-	font-weight: normal;
-	margin: 0 0 $heading-margin-bottom;
+  padding: 0;
+  font-weight: normal;
+  margin: 0 0 $heading-margin-bottom;
 }
 
 // **************************************************************************
@@ -39,24 +39,24 @@ h6 {
 
 @each $media-query-name, $media-query-value in $media-queries {
 
-	@media #{$media-query-value} {
+  @media #{$media-query-value} {
 
-		@while $heading-count > 0 {
+    @while $heading-count > 0 {
 
-			h#{$heading-count} {
-				font-size: $heading-font-size;
-				line-height: $heading-line-height;
-				margin-bottom: $heading-margin-bottom;
-				padding-top: $heading-padding-top;
-			}
+      h#{$heading-count} {
+        font-size: $heading-font-size;
+        line-height: $heading-line-height;
+        margin-bottom: $heading-margin-bottom;
+        padding-top: $heading-padding-top;
+      }
 
-			$heading-count: $heading-count - 1;
-			$heading-font-size: $heading-font-size * $heading-scale-factor;
-			$heading-line-height: $heading-line-height - .1;
-			$heading-margin-bottom: $heading-margin-bottom + .2rem;
-			$heading-padding-top: $heading-padding-top + .2rem;
-		}
-	}
+      $heading-count: $heading-count - 1;
+      $heading-font-size: $heading-font-size * $heading-scale-factor;
+      $heading-line-height: $heading-line-height - .1;
+      $heading-margin-bottom: $heading-margin-bottom + .2rem;
+      $heading-padding-top: $heading-padding-top + .2rem;
+    }
+  }
 
-	$heading-scale-factor: $heading-scale-factor + .035;
+  $heading-scale-factor: $heading-scale-factor + .035;
 }

@@ -15,23 +15,23 @@ $blockquote-margin-bottom: 2rem;
 // **************************************************************************
 
 q {
-	quotes: '\201C' '\201D' '\2018' '\2019 ';
-	margin: 0;
-	padding: 0;
+  quotes: '\201C' '\201D' '\2018' '\2019 ';
+  margin: 0;
+  padding: 0;
 }
 
 cite {
-	font-style: normal;
+  font-style: normal;
 }
 
 blockquote:before,
 blockquote:after {
-	content: none;
+  content: none;
 }
 
 blockquote {
-	padding: 0;
-	margin: 0 0 $blockquote-margin-bottom;
-	quotes: none;
-	font-style: normal;
+  padding: 0;
+  margin: 0 0 $blockquote-margin-bottom;
+  quotes: none;
+  font-style: normal;
 }

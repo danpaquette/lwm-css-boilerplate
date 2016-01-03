@@ -29,11 +29,11 @@ $generate-tile-grid: true !default;
 // **************************************************************************
 
 .row {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: stretch;
-	margin-left: -$gutter-width/2;
-	margin-right: -$gutter-width/2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-left: -$gutter-width/2;
+  margin-right: -$gutter-width/2;
 }
 
 // **************************************************************************
@@ -43,31 +43,31 @@ $generate-tile-grid: true !default;
 // **************************************************************************
 
 .row.align-top {
-	align-items: flex-start;
+  align-items: flex-start;
 }
 
 .row.align-middle {
-	align-items: center;
+  align-items: center;
 }
 
 .row.align-bottom {
-	align-items: flex-end;
+  align-items: flex-end;
 }
 
 .row.align-stretch {
-	align-items: stretch;
+  align-items: stretch;
 }
 
 .row.justify-center {
-	justify-content: center;
+  justify-content: center;
 }
 
 .row.justify-left {
-	justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .row.justify-right {
-	justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 // **************************************************************************
@@ -77,20 +77,20 @@ $generate-tile-grid: true !default;
 // **************************************************************************
 
 .col {
-	width: 100%;
+  width: 100%;
 }
 
 .row > [class*="col-"] {
-	padding-left: $gutter-width/2;
-	padding-right: $gutter-width/2;
+  padding-left: $gutter-width/2;
+  padding-right: $gutter-width/2;
 }
 
 @if($generate-push-pull) {
 
-	[class*="col-"].push,
-	[class*="col-"].pull {
-		position: relative;
-	}
+  [class*="col-"].push,
+  [class*="col-"].pull {
+    position: relative;
+  }
 }
 
 // **************************************************************************
@@ -101,52 +101,52 @@ $generate-tile-grid: true !default;
 
 @each $media-query-name, $media-query-value in $media-queries {
 
-	@media #{$media-query-value} {
+  @media #{$media-query-value} {
 
-		@for $i from 1 through $column-count {
+    @for $i from 1 through $column-count {
 
-			// Standard Column
+      // Standard Column
 
-			.col-#{$media-query-name}-#{$i} {
-				width: 100%/$column-count*$i;
-			}
+      .col-#{$media-query-name}-#{$i} {
+        width: 100%/$column-count*$i;
+      }
 
-			// Order
+      // Order
 
-			@if($generate-order) {
+      @if($generate-order) {
 
-				.order-#{$media-query-name}-#{$i} {
-					order: #{$i};
-				}
-			}
+        .order-#{$media-query-name}-#{$i} {
+          order: #{$i};
+        }
+      }
 
-			// Push & Pull
+      // Push & Pull
 
-			@if($generate-push-pull) {
+      @if($generate-push-pull) {
 
-				[class*="col-"].push-#{$media-query-name}-#{$i} {
-					right: 100%/$column-count*$i;
-				}
+        [class*="col-"].push-#{$media-query-name}-#{$i} {
+          right: 100%/$column-count*$i;
+        }
 
-				[class*="col-"].pull-#{$media-query-name}-#{$i} {
-					left: 100%/$column-count*$i;
-				}
-			}
+        [class*="col-"].pull-#{$media-query-name}-#{$i} {
+          left: 100%/$column-count*$i;
+        }
+      }
 
-			// Prefix & Suffix
+      // Prefix & Suffix
 
-			@if($generate-prefix-suffix) {
+      @if($generate-prefix-suffix) {
 
-				[class*="col-"].prefix-#{$media-query-name}-#{$i} {
-					margin-left: 100%/$column-count*$i;
-				}
+        [class*="col-"].prefix-#{$media-query-name}-#{$i} {
+          margin-left: 100%/$column-count*$i;
+        }
 
-				[class*="col-"].suffix-#{$media-query-name}-#{$i} {
-					margin-right: 100%/$column-count*$i;
-				}
-			}
-		}
-	}
+        [class*="col-"].suffix-#{$media-query-name}-#{$i} {
+          margin-right: 100%/$column-count*$i;
+        }
+      }
+    }
+  }
 }
 
 // **************************************************************************
@@ -157,63 +157,63 @@ $generate-tile-grid: true !default;
 
 @if($generate-tile-grid) {
 
-	.tile {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: stretch;
-	}
+  .tile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
 
-	.tile.align-top {
-		align-items: flex-start;
-	}
+  .tile.align-top {
+    align-items: flex-start;
+  }
 
-	.tile.align-middle {
-		align-items: center;
-	}
+  .tile.align-middle {
+    align-items: center;
+  }
 
-	.tile.align-bottom {
-		align-items: flex-end;
-	}
+  .tile.align-bottom {
+    align-items: flex-end;
+  }
 
-	.tile.align-stretch {
-		align-items: stretch;
-	}
+  .tile.align-stretch {
+    align-items: stretch;
+  }
 
-	.tile.justify-center {
-		justify-content: center;
-	}
+  .tile.justify-center {
+    justify-content: center;
+  }
 
-	.tile.justify-left {
-		justify-content: flex-start;
-	}
+  .tile.justify-left {
+    justify-content: flex-start;
+  }
 
-	.tile.justify-right {
-		justify-content: flex-end;
-	}
+  .tile.justify-right {
+    justify-content: flex-end;
+  }
 
-	.tile > * {
-		display: block;
-		width: 100%;
-		margin-right: #{$gutter-width};
-	}
+  .tile > * {
+    display: block;
+    width: 100%;
+    margin-right: #{$gutter-width};
+  }
 
-	@each $media-query-name, $media-query-value in $media-queries {
+  @each $media-query-name, $media-query-value in $media-queries {
 
-		@media #{$media-query-value} {
+    @media #{$media-query-value} {
 
-			@for $i from 1 through $tile-count {
+      @for $i from 1 through $tile-count {
 
-				.tile-#{$media-query-name}-#{$i} > * {
-					width: calc((100% / #{$i}) + #{$gutter-width} / #{$i} - #{$gutter-width});
-					margin-bottom: $gutter-width;
-				}
+        .tile-#{$media-query-name}-#{$i} > * {
+          width: calc((100% / #{$i}) + #{$gutter-width} / #{$i} - #{$gutter-width});
+          margin-bottom: $gutter-width;
+        }
 
-				.tile-#{$media-query-name}-#{$i} > *:nth-child(#{$i}n + #{$i}) {
-					margin-right: 0;
-				}
-			}
-		}
-	}
+        .tile-#{$media-query-name}-#{$i} > *:nth-child(#{$i}n + #{$i}) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
 }
 
 // **************************************************************************
@@ -224,11 +224,11 @@ $generate-tile-grid: true !default;
 
 @if($generate-collapsed-grid) {
 
-	.row.collapsed {
-		margin: 0;
-	}
+  .row.collapsed {
+    margin: 0;
+  }
 
-	.row.collapsed > [class*="col-"] {
-		padding: 0;
-	}
+  .row.collapsed > [class*="col-"] {
+    padding: 0;
+  }
 }

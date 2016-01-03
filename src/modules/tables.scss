@@ -15,26 +15,26 @@ $tables-margin-bottom: 2rem;
 // **************************************************************************
 
 table {
-	border-collapse: separate;
-	table-layout: auto;
-	border-spacing: 0;
-	margin: 0 0 $tables-margin-bottom;
-	width: 100%;
-	padding: 0;
+  border-collapse: separate;
+  table-layout: auto;
+  border-spacing: 0;
+  margin: 0 0 $tables-margin-bottom;
+  width: 100%;
+  padding: 0;
 }
 
 th {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 tr,
 th,
 td {
-	text-align: left;
-	vertical-align: top;
+  text-align: left;
+  vertical-align: top;
 }
 
 caption {
-	text-align: left;
-	caption-side: top;
+  text-align: left;
+  caption-side: top;
 }
