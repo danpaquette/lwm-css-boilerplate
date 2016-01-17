@@ -1,0 +1,47 @@
+// **************************************************************************
+//
+// Containers
+//
+// 01. Container Defaults
+//
+// **************************************************************************
+
+$container-xs-max-width: 40rem !default;
+$container-sm-max-width: 60rem !default;
+$container-md-max-width: 80rem !default;
+$container-lg-max-width: 100rem !default;
+$container-xl-max-width: 120rem !default;
+
+// **************************************************************************
+//
+// 01. Container Defaults
+//
+// **************************************************************************
+
+.container-xs,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  margin: 0 auto;
+}
+
+.container-xs {
+  max-width: $container-xs-max-width;
+}
+
+.container-sm {
+  max-width: $container-sm-max-width;
+}
+
+.container-md {
+  max-width: $container-md-max-width;
+}
+
+.container-lg {
+  max-width: $container-lg-max-width;
+}
+
+.container-xl {
+  max-width: $container-xl-max-width;
+}

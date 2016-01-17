@@ -8,9 +8,9 @@
 //
 // **************************************************************************
 
-$meter-background-color: #dfdfdf;
-$meter-default-bar-color: #aaa;
-$meter-height: 1rem;
+$meter-background-color: #dfdfdf !default;
+$meter-default-bar-color: #aaa !default;
+$meter-height: 1rem !default;
 
 // **************************************************************************
 //

@@ -6,10 +6,10 @@
 //
 // **************************************************************************
 
-$code-font-stack: Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace;
-$code-pre-margin-bottom: 2rem;
-$code-pre-font-size: 1.3rem;
-$code-pre-background-color: #efefef;
+$code-font-stack: Menlo, Consolas, 'DejaVu Sans Mono', Monaco, monospace !default;
+$code-pre-margin-bottom: 2rem !default;
+$code-pre-font-size: 1.3rem !default;
+$code-pre-background-color: #efefef !default;
 
 // **************************************************************************
 //

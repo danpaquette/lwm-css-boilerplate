@@ -15,14 +15,14 @@
 //
 // **************************************************************************
 
-$input-height: 3rem;
-$input-padding-top-bottom: .2rem;
-$input-padding-right-left: .8rem;
-$input-background-color: #fff;
-$input-border-color: #dfdfdf;
+$input-height: 3rem !default;
+$input-padding-top-bottom: .2rem !default;
+$input-padding-right-left: .8rem !default;
+$input-background-color: #fff !default;
+$input-border-color: #dfdfdf !default;
 
-$textarea-min-height: 15rem;
-$textarea-line-height: 1.5;
+$textarea-min-height: 15rem !default;
+$textarea-line-height: 1.5 !default;
 
 // **************************************************************************
 //
