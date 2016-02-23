@@ -29,7 +29,7 @@
     "autoprefixer": "^6.1.2",
     "grunt": "^0.4.5",
     "grunt-cli": "^0.1.13",
-    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-cssmin": "^0.14.0",
     "grunt-postcss": "^0.7.1",
     "grunt-sass": "^1.1.0",

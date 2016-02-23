@@ -24,8 +24,8 @@ cite {
   font-style: normal;
 }
 
-blockquote:before,
-blockquote:after {
+blockquote::before,
+blockquote::after {
   content: none;
 }
 

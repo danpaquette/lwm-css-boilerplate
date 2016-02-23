@@ -95,7 +95,7 @@ address {
 
 hr {
   display: block;
-  margin: $typography-margin-bottom/2 0 $typography-margin-bottom;
+  margin: ($typography-margin-bottom / 2) 0 $typography-margin-bottom;
   padding: 0;
   border: 0;
   background: $typography-hr-color;

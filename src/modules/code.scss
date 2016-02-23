@@ -54,10 +54,10 @@ var {
   font-weight: bold;
 }
 
-var:before {
+var::before {
   content: '<';
 }
 
-var:after {
+var::after {
   content: '>';
 }

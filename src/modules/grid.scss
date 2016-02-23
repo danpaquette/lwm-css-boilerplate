@@ -32,8 +32,8 @@ $generate-tile-grid: true !default;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  margin-left: -$gutter-width/2;
-  margin-right: -$gutter-width/2;
+  margin-left: -$gutter-width / 2;
+  margin-right: -$gutter-width / 2;
 }
 
 // **************************************************************************
@@ -81,8 +81,8 @@ $generate-tile-grid: true !default;
 }
 
 .row > [class*="col-"] {
-  padding-left: $gutter-width/2;
-  padding-right: $gutter-width/2;
+  padding-left: $gutter-width / 2;
+  padding-right: $gutter-width / 2;
 }
 
 @if($generate-push-pull) {
@@ -108,7 +108,7 @@ $generate-tile-grid: true !default;
       // Standard Column
 
       .col-#{$media-query-name}-#{$i} {
-        width: 100%/$column-count*$i;
+        width: 100% / $column-count * $i;
       }
 
       // Order
@@ -125,11 +125,11 @@ $generate-tile-grid: true !default;
       @if($generate-push-pull) {
 
         [class*="col-"].push-#{$media-query-name}-#{$i} {
-          right: 100%/$column-count*$i;
+          right: 100% / $column-count * $i;
         }
 
         [class*="col-"].pull-#{$media-query-name}-#{$i} {
-          left: 100%/$column-count*$i;
+          left: 100% / $column-count * $i;
         }
       }
 
@@ -138,11 +138,11 @@ $generate-tile-grid: true !default;
       @if($generate-prefix-suffix) {
 
         [class*="col-"].prefix-#{$media-query-name}-#{$i} {
-          margin-left: 100%/$column-count*$i;
+          margin-left: 100% / $column-count * $i;
         }
 
         [class*="col-"].suffix-#{$media-query-name}-#{$i} {
-          margin-right: 100%/$column-count*$i;
+          margin-right: 100% / $column-count * $i;
         }
       }
     }
@@ -157,44 +157,44 @@ $generate-tile-grid: true !default;
 
 @if($generate-tile-grid) {
 
-  .tile {
+  [class*="tile-"] {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
   }
 
-  .tile.align-top {
+  [class*="tile-"].align-top {
     align-items: flex-start;
   }
 
-  .tile.align-middle {
+  [class*="tile-"].align-middle {
     align-items: center;
   }
 
-  .tile.align-bottom {
+  [class*="tile-"].align-bottom {
     align-items: flex-end;
   }
 
-  .tile.align-stretch {
+  [class*="tile-"].align-stretch {
     align-items: stretch;
   }
 
-  .tile.justify-center {
+  [class*="tile-"].justify-center {
     justify-content: center;
   }
 
-  .tile.justify-left {
+  [class*="tile-"].justify-left {
     justify-content: flex-start;
   }
 
-  .tile.justify-right {
+  [class*="tile-"].justify-right {
     justify-content: flex-end;
   }
 
-  .tile > * {
+  [class*="tile-"] > * {
     display: block;
     width: 100%;
-    margin-right: #{$gutter-width};
+    margin-bottom: $gutter-width;
   }
 
   @each $media-query-name, $media-query-value in $media-queries {
@@ -205,11 +205,14 @@ $generate-tile-grid: true !default;
 
         .tile-#{$media-query-name}-#{$i} > * {
           width: calc((100% / #{$i}) + #{$gutter-width} / #{$i} - #{$gutter-width});
-          margin-bottom: $gutter-width;
         }
 
         .tile-#{$media-query-name}-#{$i} > *:nth-child(#{$i}n + #{$i}) {
           margin-right: 0;
+        }
+
+        .tile-#{$media-query-name}-#{$i} > *:not(:nth-child(#{$i}n + #{$i})) {
+          margin-right: #{$gutter-width};
         }
       }
     }

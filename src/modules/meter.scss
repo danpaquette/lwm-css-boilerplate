@@ -64,7 +64,7 @@ meter::-webkit-meter-even-less-good-value {
 //
 // **************************************************************************
 
-meter::-moz-meter-bar {
+meter:-moz-meter-bar {
   width: 100%;
   display: block;
   overflow: hidden;
@@ -72,20 +72,20 @@ meter::-moz-meter-bar {
   background: $meter-background-color;
 }
 
-meter:-moz-meter-optimum::-moz-meter-bar,
-meter:-moz-meter-sub-optimum::-moz-meter-bar,
-meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+meter:-moz-meter-optimum:-moz-meter-bar,
+meter:-moz-meter-sub-optimum:-moz-meter-bar,
+meter:-moz-meter-sub-sub-optimum:-moz-meter-bar {
   background: $meter-default-bar-color;
 }
 
-meter:-moz-meter-optimum::-moz-meter-bar {
+meter:-moz-meter-optimum:-moz-meter-bar {
   background: $green;
 }
 
-meter:-moz-meter-sub-optimum::-moz-meter-bar {
+meter:-moz-meter-sub-optimum:-moz-meter-bar {
   background: $yellow;
 }
 
-meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
+meter:-moz-meter-sub-sub-optimum:-moz-meter-bar {
   background: $red;
 }
