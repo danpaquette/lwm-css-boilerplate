@@ -28,7 +28,10 @@ module.exports = function(grunt) {
 		clean: {
 			dist: [
 				"dist"
-			]
+			],
+      options: {
+        force: true
+      }
 		},
 
 		/**
