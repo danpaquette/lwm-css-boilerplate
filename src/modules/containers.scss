@@ -11,6 +11,7 @@ $container-sm-max-width: 60rem !default;
 $container-md-max-width: 80rem !default;
 $container-lg-max-width: 100rem !default;
 $container-xl-max-width: 120rem !default;
+$container-padding: 0 1rem !default;
 
 // **************************************************************************
 //
@@ -24,6 +25,7 @@ $container-xl-max-width: 120rem !default;
 .container-lg,
 .container-xl {
   margin: 0 auto;
+  padding: $container-padding;
 }
 
 .container-xs {
