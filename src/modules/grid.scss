@@ -217,6 +217,22 @@ $generate-tile-grid: true !default;
       }
     }
   }
+
+  @if($generate-collapsed-grid) {
+    @each $media-query-name, $media-query-value in $media-queries {
+
+      @media #{$media-query-value} {
+
+        @for $i from 1 through $tile-count {
+
+          [class*="tile-"].collapsed.tile-#{$media-query-name}-#{$i} > * {
+            width: calc(100% / #{$i});
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
 }
 
 // **************************************************************************
