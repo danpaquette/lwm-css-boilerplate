@@ -1,6 +1,6 @@
 {
   "name": "lwm-css-boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.10",
   "description": "The Lightweight Modular CSS Boilerplate provides a set of baseline styles and tools to compose websites and web applications.",
   "main": "gruntfile.js",
   "scripts": {
