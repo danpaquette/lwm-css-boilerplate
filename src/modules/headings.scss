@@ -9,8 +9,7 @@
 
 $heading-font-size: 1.4rem !default;
 $heading-line-height: 1.825 !default;
-$heading-margin-bottom: 2rem !default;
-$heading-padding-top: 0 !default;
+$heading-margin-bottom: 1rem !default;
 $heading-scale-factor: 1.15 !default;
 $heading-scale-factor-increase: .015 !default;
 $heading-count: 6 !default;
@@ -48,14 +47,12 @@ h6 {
         font-size: $heading-font-size;
         line-height: $heading-line-height;
         margin-bottom: $heading-margin-bottom;
-        padding-top: $heading-padding-top;
       }
 
       $heading-count: $heading-count - 1;
       $heading-font-size: $heading-font-size * $heading-scale-factor;
       $heading-line-height: $heading-line-height - .1;
       $heading-margin-bottom: $heading-margin-bottom + .2rem;
-      $heading-padding-top: $heading-padding-top + .2rem;
     }
   }
 

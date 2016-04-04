@@ -161,6 +161,7 @@ $generate-tile-grid: true !default;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+    margin-bottom: -#{$gutter-width};
   }
 
   [class*="tile-"].align-top {
